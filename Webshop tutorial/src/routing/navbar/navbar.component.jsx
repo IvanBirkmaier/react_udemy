@@ -10,8 +10,11 @@ const Navbar = () => {
            <Crown className="logo"/>
           </Link>
           <div className="nav-links-container">
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/shop">
               Shop
+            </Link>
+            <Link className="nav-link" to="/sing-in">
+              Sing-in
             </Link>
           </div>
         </div>
