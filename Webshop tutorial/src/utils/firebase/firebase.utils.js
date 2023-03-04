@@ -9,6 +9,7 @@ import {
     GoogleAuthProvider
 } from "firebase/auth"
 
+
 /*
 Importiert verschiedene Methoden aus der Firestorm-Database package/modul (firestore)
 Link zum Datenmodell mit Collections, Documents und Data : https://firebase.google.com/docs/firestore/data-model?hl=de
@@ -21,14 +22,16 @@ import {
     setDoc
 } from "firebase/firestore"
 
+console.log(process.env.REACT_APP_FIRESTORM_APIKEY)
+
 //setz die Konifgurationen um das SDK mit der erstellten virtuellen Firebase-App zu verbinden
 const firebaseConfig = {
-  apiKey: "AIzaSyAUiov2pXNGSinkfy8mtiWlDm7aR3kgIr8",
-  authDomain: "react-tutorial-9606c.firebaseapp.com",
-  projectId: "react-tutorial-9606c",
-  storageBucket: "react-tutorial-9606c.appspot.com",
-  messagingSenderId: "498124569714",
-  appId: "1:498124569714:web:cf8c7f1b56de2fd89096eb"
+  apiKey: process.env.REACT_APP_FIRESTORM_APIKEY,
+  authDomain: process.env.REACT_APP_FIRESTORM_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIRESTORM_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIRESTORM_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_FIRESTORM_APPID,
+  appId: process.env.REACT_APP_FIRESTORM_APPID
 };
 
 // Initzalisiert die Firebase-App des SDK mit der erstellten virtuellen Firebase-App, über die festgelegten Konfigs. 
